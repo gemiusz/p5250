@@ -98,10 +98,10 @@ class P5250Client():
         """
         return self.p3270.moveToFirstInputField()
 
-    def sendText(self, text):
-        """ Send text to host.
+    def sendText(self, text, asterisks=False):
+        """ Send text to host. Possible to hide value (asterisk it) in log by set asterisks to True.
         """
-        return self.p3270.sendText(text)
+        return self.p3270.sendText(text, asterisks=False)
 
     def saveScreen(self, fileName='screen', dataType='html'):
         """ Save the current screen in the form of an HTML file.
